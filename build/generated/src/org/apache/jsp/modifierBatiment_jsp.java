@@ -1,0 +1,274 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.util.List;
+import model.Batiment;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
+
+public final class modifierBatiment_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("<html lang=\"fr\">\n");
+      out.write("    <head>\n");
+      out.write("        <!-- Basic -->\n");
+      out.write("        <meta charset=\"UTF-8\">\n");
+      out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">   \n");
+      out.write("\n");
+      out.write("        <!-- Mobile Metas -->\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n");
+      out.write("\n");
+      out.write("        <!-- Site Metas -->\n");
+      out.write("        <title>memoire</title>  \n");
+      out.write("        <meta name=\"keywords\" content=\"\">\n");
+      out.write("        <meta name=\"description\" content=\"\">\n");
+      out.write("        <meta name=\"author\" content=\"\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/bootstrap.css\">\n");
+      out.write("        <!-- Site CSS -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"style_1.css\">\n");
+      out.write("        <!-- Responsive CSS -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/responsive.css\">\n");
+      out.write("        <!-- Custom CSS -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/custom.css\">\n");
+      out.write("        <!-- Font Icon -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"fonts/material-icon/css/material-design-iconic-font.min.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"vendor/nouislider/nouislider.min.css\">\n");
+      out.write("        <!-- Main css -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/form.css\">\n");
+      out.write("        <link rel=\"icon\" type=\"image/png\" href=\"images/icons/favicon.ico\"/>\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap/css/bootstrap.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"fonts/font-awesome-4.7.0/css/font-awesome.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"fonts/iconic/css/material-design-iconic-font.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/animate/animate.css\">\n");
+      out.write("        <!--===============================================================================================-->\t\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/css-hamburgers/hamburgers.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/animsition/css/animsition.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/select2/select2.min.css\">\n");
+      out.write("        <!--===============================================================================================-->\t\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/daterangepicker/daterangepicker.css\">\n");
+      out.write("        <!--===============================================================================================-->\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/util.css\">\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\">\n");
+      out.write("        <!-- Site CSS -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"style.css\">\n");
+      out.write("        <!-- Modernizer for Portfolio -->\n");
+      out.write("        <script src=\"js/modernizer.js\"></script>\n");
+      out.write("\n");
+      out.write("        <!--[if lt IE 9]>\n");
+      out.write("          <script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n");
+      out.write("          <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n");
+      out.write("        <![endif]-->\n");
+      out.write("\n");
+      out.write("    </head>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    <body>\n");
+      out.write("        <div class=\"top-bar\">\n");
+      out.write("            <div class=\"container-fluid\">\n");
+      out.write("                <div class=\"row\">\n");
+      out.write("                    <div class=\"col-md-6 col-sm-6\">\n");
+      out.write("                        <div class=\"left-top\">\n");
+      out.write("                            <div class=\"email-box\">\n");
+      out.write("                                <a href=\"#\"><i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i> projetmemoire@gmail.com</a>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"phone-box\">\n");
+      out.write("                                <a href=\"tel:1234567890\"><i class=\"fa fa-phone\" aria-hidden=\"true\"></i> +2213051891</a>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("    <header class=\"header header_style_01\">\n");
+      out.write("        <nav class=\"megamenu navbar navbar-default\">\n");
+      out.write("            <div class=\"container-fluid\">\n");
+      out.write("                <div class=\"navbar-header\">\n");
+      out.write("                    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n");
+      out.write("                        <span class=\"sr-only\">Toggle navigation</span>\n");
+      out.write("                        <span class=\"icon-bar\"></span>\n");
+      out.write("                        <span class=\"icon-bar\"></span>\n");
+      out.write("                        <span class=\"icon-bar\"></span>\n");
+      out.write("                    </button>\n");
+      out.write("                    <a class=\"navbar-brand\" href=\"#\"><img src=\"images/logos/logo.png\" alt=\"image\"></a>\n");
+      out.write("                </div>\n");
+      out.write("                <div id=\"navbar\" class=\"navbar-collapse collapse\">\n");
+      out.write("                    <ul class=\"nav navbar-nav navbar-right\">\n");
+      out.write("                        <li><a  href=\"Controleur?action=rtBat\" style=\"font-size: 140%\">Retour</a></li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        <br/>\n");
+      out.write("        <ul class=\"nav nav-tabs\">\n");
+      out.write("            <li class=\"active\"><a href=\"Controleur?action=bienvenu\" id=\"menu\">Accueil</a></li>\n");
+      out.write("            <li><a href=\"Controleur?action=voirD\" id=\"menu\">Consulter Demandes</a></li>  \n");
+      out.write("                    <li class=\"dropdown\">\n");
+      out.write("                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"menu\"> Ajouter <span class=\"caret\"></span> </a>\n");
+      out.write("                    <ul class=\"dropdown-menu\"> \n");
+      out.write("                        <li> <a href=\"Controleur?action=AjObjet\" style=\"font-color:#fd6802;\" id=\"puce\"><p style=\"color:#fd6802\">Objet</p></a> </li>\n");
+      out.write("                        <li> <a href=\"Controleur?action=AjZone\" id=\"puce\"><p style=\"color:#fd6802\">Zone</p></a> </li>\n");
+      out.write("                        <li> <a href=\"Controleur?action=AjBat\" id=\"puce\"><p style=\"color:#fd6802\">Bâtiment</p></a> </li>\n");
+      out.write("                        <li> <a href=\"Controleur?action=AjLocalisation\" id=\"puce\"><p style=\"color:#fd6802\">Localisation</p></a> </li>\n");
+      out.write("                        <li> <a href=\"Controleur?action=AjReseau\" id=\"puce\"><p style=\"color:#fd6802\"> Réseau</p></a> </li>\n");
+      out.write("                        <li> <a href=\"Controleur?action=AjStation\" id=\"puce\"> <p style=\"color:#fd6802\">Station</p></a> </li>\n");
+      out.write("                        <li class=\"divider\"></li> \n");
+      out.write("                        <li class=\"divider\"></li> \n");
+      out.write("                        <li > <a href=\"Controleur?action=ajUser\" id=\"puce\"><p style=\"color:#fd6802\">Utilisateur</p></a> </li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                <li class=\"dropdown\">\n");
+      out.write("                 <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"menu\"> Lister <span class=\"caret\"></span> </a>\n");
+      out.write("                <ul class=\"dropdown-menu\"> \n");
+      out.write("                    <li> <a href=\"Controleur?action=listeObjet\" id=\"puce\"><p style=\"color:#fd6802\">Objet</p></a> </li>\n");
+      out.write("                    <li> <a href=\"Controleur?action=listeZone\" id=\"puce\"><p style=\"color:#fd6802\">Zone</p></a> </li>\n");
+      out.write("                    <li> <a href=\"Controleur?action=listeBat\" id=\"puce\"><p style=\"color:#fd6802\">Bâtiment</p></a> </li>\n");
+      out.write("                    <li> <a href=\"Controleur?action=listeLocalisation\" id=\"puce\"><p style=\"color:#fd6802\">Localisation</p></a> </li>\n");
+      out.write("                    <li> <a href=\"Controleur?action=listeReseau\" id=\"puce\"><p style=\"color:#fd6802\"> Réseau</p></a> </li>\n");
+      out.write("                    <li> <a href=\"Controleur?action=listeStation\" id=\"puce\"> <p style=\"color:#fd6802\">Station</p></a> </li>\n");
+      out.write("                    <li class=\"divider\"></li> \n");
+      out.write("                    <li class=\"divider\"></li> \n");
+      out.write("                    <li > <a href=\"Controleur?action=listeAbonne\" id=\"puce\"><p style=\"color:#fd6802\">Utilisateur</p></a> </li>\n");
+      out.write("                </ul>\n");
+      out.write("            </li>\n");
+      out.write("        </ul> </nav>\n");
+      out.write("    </header> \n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <div class=\"container-login100\" style=\"background-image: url('images/lampe.png'); background-attachment: fixed;\">\n");
+      out.write("            <div class=\"wrap-login100 p-l-100 p-r-100 p-t-200 p-b-30\" style=\"background-image: url('images/bg.png'); background-color: #faf9f8; width: 1000px;\"> \n");
+      out.write("                <div class=\"top-bar\">\n");
+      out.write("                    <div class=\"container-fluid\">\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("                            <div class=\"col-md-6 col-sm-6\">\n");
+      out.write("                                <div class=\"left-top\">\n");
+      out.write("\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div><br/>\n");
+      out.write("                \n");
+      out.write("                    <form class=\"login100-form validate-form\" method=\"POST\" action=\"Controleur\" style='size: 70px;'>\n");
+      out.write("                       \n");
+      out.write("                        <input type=\"hidden\" name=\"action\" value=\"updateBat\"/>\n");
+      out.write("                       <input type=\"hidden\" name=\"idBat\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${Batiment.idBatiment}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"/>\n");
+      out.write("                       <input type=\"hidden\" name=\"idZone\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${Batiment.idZone}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"/>\n");
+      out.write("\n");
+      out.write("                        <span class=\"login100-form-title p-b-37\" id=\"cal\">\n");
+      out.write("                            Modification Batiment.\n");
+      out.write("                        </span> \n");
+      out.write("\n");
+      out.write("                         \n");
+      out.write("                        <div class=\"form-group\">\n");
+      out.write("                            <label for=\"inputAddress2\"><h5><a  style=\"font-size:20px;\"  >Nom Batiment</a></h5></label>\n");
+      out.write("                            <input type=\"text\" class=\"form-control\"  style=\"font-size:20px;\"  id=\"inputAddress2\" type=\"text\" placeholder=\"nom batiment\" name=\"nomBat\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${Batiment.nomBatiment}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required>\n");
+      out.write("                        </div>\n");
+      out.write("                       <br></br>\n");
+      out.write("\n");
+      out.write("                        <div class=\"container-login100-form-btn\">\n");
+      out.write("                            <input type=\"submit\" value=\"Enregistrer\" class=\"login100-form-btn\"   style=\"font-size:20px;\"   style=\"max-width: 50px\"/><br/><br/>\n");
+      out.write("                        </div>\n");
+      out.write("                    </form>\n");
+      out.write("   </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    <a href=\"#\" id=\"scroll-to-top\" class=\"dmtop global-radius\"><i class=\"fa fa-angle-up\"></i></a>\n");
+      out.write("\n");
+      out.write("    <!-- ALL JS FILES -->\n");
+      out.write("    <script src=\"js/all.js\"></script>\n");
+      out.write("    <!-- ALL PLUGINS -->\n");
+      out.write("    <script src=\"js/custom.js\"></script>\n");
+      out.write("    <script src=\"js/portfolio.js\"></script>\n");
+      out.write("    <script src=\"js/hoverdir.js\"></script>    \n");
+      out.write("<footer class=\"footer\">\n");
+      out.write("    <div class=\"container\"></div>\n");
+      out.write("\n");
+      out.write("</footer>  \n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

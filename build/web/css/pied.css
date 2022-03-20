@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 oct. 2019, 15:12:53
+    Author     : LENOVO
+*/
+
+/*------------------------------------------------------------------
+    Banner Slider
+-------------------------------------------------------------------*/
+
+.slider-bg-one {
+    background-image: url("uploads/slider_01.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-bg-two {
+    background-image: url("uploads/slider_02.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-bg-three {
+    background-image: url("uploads/slider_03.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-content-area {
+    height: 100vh;
+    position: relative;
+}
+
+.home-one-slider-otem .slider-content-area {
+    height: 300px;
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.slide-text h1 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: capitalize;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.slide-text h1 span{
+	color: #fd  6802;
+}
+
+.slide-text h2 {
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+
+.slider-wrapper .owl-nav .owl-prev, .slider-wrapper .owl-nav .owl-next {
+    background: #393939;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in-out 0s;
+    width: 60px;
+	border-radius: 25px 0px 25px 0px;
+}
+
+.slider-wrapper .owl-nav .owl-prev:hover, .slider-wrapper .owl-nav .owl-next:hover {
+	background: #fd6802;
+}
+
+.slider-wrapper .owl-nav .owl-prev {
+    margin-left: 0%;
+	left: 0px;
+	position: absolute;
+}
+
+.slider-wrapper .owl-nav .owl-prev i{
+	position: absolute;
+	left: 0px;
+	right: 0;
+	width: auto;
+	height: auto;
+	background: none;
+	color: #ffffff;
+}
+
+.slider-wrapper .owl-nav .owl-next {
+    margin-right: 0%;
+    right: 0;
+	position: absolute;
+}
+
+.slider-wrapper .owl-nav .owl-next i{
+	position: absolute;
+	right: 0;
+	left: 0px;
+	width: auto;
+	height: auto;
+	background: none;
+	color: #ffffff;
+}
+
+.home-one-slider-otem::before{
+	content: "";
+	position: absolute;
+	background: rgba(0,0,0, 0.8);
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 100%;
+	z-index: 1
+}
